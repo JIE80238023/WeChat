@@ -29,6 +29,7 @@ macOS 客户端插件
 | [4.1.7.56](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.7.56_34878.dmg) | 34878 | ✅  |  ✅  |   ✅   |  ❌  | [立即下载](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.7.56_34878.dmg) |
 | [4.1.7.57](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.7.57_34888.dmg) | 34888 | ✅  |  ✅  |   ✅   |  ❌  | [立即下载](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.7.57_34888.dmg) |
 | [4.1.8.21](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.21_36420.dmg) | 36420 | ✅  |  ✅  |   ❌   |  ❌  | [立即下载](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.21_36420.dmg) |
+| [4.1.8.22](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.22_36451.dmg) | 36451 | ✅  |  ✅  |   ❌   |  ❌  | [立即下载](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.22_36451.dmg) |
 | [4.1.8.23](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.23_36507.dmg) | 36507 | ✅  |  ✅  |   ❌   |  ❌  | [立即下载](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.23_36507.dmg) |
 | [4.1.8.51](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.51_36777.dmg) | 36777 | ✅  |  ✅  |   ❌   |  ❌  | [立即下载](https://dldir1v6.qq.com/weixin/Universal/Mac/xWeChatMac_universal_4.1.8.51_36777.dmg) |
 
@@ -84,9 +85,10 @@ sudo sh install.sh
 
 ### 2.1.6 (2026.03.12)
 
-1. 支持最新 4.1.8.23(36507)
-2. 支持最新 4.1.8.51(36777)
-3. 不再支持 Intel 机型
+1. 支持最新 4.1.8.22 (36451)
+2. 支持最新 4.1.8.23 (36507)
+3. 支持最新 4.1.8.51 (36777)
+4. 不再支持 Intel 机型
 
 
 <a href="https://star-history.com/#X1a0He/X1a0HeWeChatPlugin&Timeline">
