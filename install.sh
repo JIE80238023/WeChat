@@ -61,17 +61,34 @@ fi
 
 # 拷贝动态库到微信目录
 echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 正在拷贝插件到微信目录..."
+
+# 安装 X1a0HeWeChatPlugin.dylib
 cp "./X1a0HeWeChatPlugin.dylib" "$WECHAT_APP_PATH"
 if [ $? -ne 0 ]; then
-    echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 拷贝插件失败，请检查权限或重试"
+    echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 拷贝 X1a0HeWeChatPlugin.dylib 失败，请检查权限或重试"
     exit 1
 fi
 
-# 注入动态库
-echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 正在注入插件..."
+# 安装 WeChatHooks.dylib
+cp "./WeChatHooks.dylib" "$WECHAT_APP_PATH"
+if [ $? -ne 0 ]; then
+    echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 拷贝 WeChatHooks.dylib 失败，请检查权限或重试"
+    exit 1
+fi
+
+# 注入 X1a0HeWeChatPlugin.dylib
+echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 正在注入 X1a0HeWeChatPlugin..."
 ./insert_dylib "$WECHAT_APP_PATH/X1a0HeWeChatPlugin.dylib" "$WECHAT_EXECUTABLE_PATH" "$WECHAT_EXECUTABLE_PATH"
 if [ $? -ne 0 ]; then
-    echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 注入插件失败"
+    echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 注入 X1a0HeWeChatPlugin 失败"
+    exit 1
+fi
+
+# 注入 WeChatHooks.dylib
+echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 正在注入 WeChatHooks..."
+./insert_dylib "$WECHAT_APP_PATH/WeChatHooks.dylib" "$WECHAT_EXECUTABLE_PATH" "$WECHAT_EXECUTABLE_PATH"
+if [ $? -ne 0 ]; then
+    echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 注入 WeChatHooks 失败"
     exit 1
 fi
 
@@ -94,3 +111,7 @@ then
 fi
 
 echo "[${X1A0HE_WECHAT_PLUGIN_INSTALLER}] 安装完成！"
+echo ""
+echo "已安装插件："
+echo "  - X1a0HeWeChatPlugin (消息防撤回、多开、禁用更新等)"
+echo "  - WeChatHooks (撤回拦截、头像圆角、折叠群聊、导出表情等)"
